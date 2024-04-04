@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaPlay } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const VideoSection = () => {
   return (
@@ -12,11 +13,16 @@ const VideoSection = () => {
         </h2>
         </div>
         <div className=' h-1/2 w-screen bg-white'></div>
-    <div className=" absolute cursor-pointer w-2/3 md:w-1/2 h-40 md:h-1/2 bg-gray-400 mt-16 flex justify-center items-center flex-col z-10 ">
+    <motion.div
+        initial={{ opacity: 0.6, scale: 0.6 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, type: "spring" }}
+        viewport={{ once: true }}
+        className=" absolute cursor-pointer w-2/3 md:w-1/2 h-40 md:h-1/2 bg-gray-400 mt-16 flex justify-center items-center flex-col z-10 ">
         <div className=' bg-blue-600 flex hover:bg-blue-500 justify-center items-center rounded-full w-16 h-16'>
             <FaPlay className='text-white text-2xl' />
         </div>
-    </div>
+    </motion.div>
     </div>
     </div>
   )

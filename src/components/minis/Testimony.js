@@ -1,8 +1,13 @@
 import React from 'react'
+import { motion } from "framer-motion"
 
 const Testimony = ({ item }) => {
   return (
-    <div className={` mt-8 text-left justify-around w-9/12 gap-4 flex flex-col md:flex-row`}>
+    <motion.div
+    initial={{ opacity: 0.5, y: 200 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, type: 'spring' }}
+    viewport={{ once: true }} className={` mt-8 text-left justify-around w-9/12 gap-4 flex flex-col md:flex-row`}>
     <div className=" hidden md:flex w-2/5 flex-col items-center">
         <img className=' w-full md:max-h-2/5 rounded-3xl' src={item.imgSrc} />
     </div>
@@ -15,7 +20,7 @@ const Testimony = ({ item }) => {
       {item.subTitle}
     </h2>
     </div>
-  </div>
+  </motion.div>
   )
 }
 

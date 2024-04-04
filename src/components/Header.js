@@ -3,6 +3,7 @@ import logo from '../assets/images/logo.png'
 import MenuItem from './minis/MenuItem';
 import { FiMenu } from 'react-icons/fi';
 import { RxCross1 } from 'react-icons/rx'
+import { motion } from "framer-motion";
 
 const menuItems = [
   {
@@ -98,7 +99,11 @@ const Header = () => {
       </div>
     </div>
     { menuIsOn && (
-    <div className=' md:hidden h-full bg-white flex flex-col items-center justify-between'>
+    <motion.div
+    initial={{ opacity: 0.2, y: -500 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, type: 'just'}}
+    className=' md:hidden h-fit absolute -z-10 w-screen bg-white flex flex-col items-center justify-between'>
       <div className=' flex flex-col gap-4 text-gray-900'>
         {menuItems.map((item, index) => (
           <MenuItem key={index} item={item} zIndex={20} />
@@ -108,7 +113,7 @@ const Header = () => {
         <button onClick={() => setMenuIsOn(!menuIsOn)} className=' w-fit p-3 hover:text-blue-600'>Log In</button>
         <button onClick={() => setMenuIsOn(!menuIsOn)} className=' w-fit p-3 bg-blue-600 hover:bg-blue-500 rounded-full px-5 py-1 text-white'>Get Started</button>
       </div>
-    </div>
+    </motion.div>
     ) }
     </div>
   )

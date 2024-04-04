@@ -14,16 +14,16 @@ const featuresList = [
   },
   {
     index: 2,
-    title: 'Automated experience',
-    subTitle: 'Schedule efficiently and save everyone time',
-    bodyText: 'The faster you connect clients, students, or customers to the right people and resources, the more time everyone gets back.',
+    title: 'Simple and intuitive',
+    subTitle: 'Build and publish a form in minutes',
+    bodyText: 'Quickly get started with a straightforward form-building experience, which Caledly admins create and manage for teams. Share via links or embed on your website.',
     imgSrc: feat2,
   },
   {
     index: 3,
-    title: 'Automated experience',
-    subTitle: 'Schedule efficiently and save everyone time',
-    bodyText: 'The faster you connect clients, students, or customers to the right people and resources, the more time everyone gets back.',
+    title: 'Faster connections',
+    subTitle: 'No more missed opportunities',
+    bodyText: 'Embed Routug forms in your website and eliminate the booking delays and customer drop off typically caused by manual follow up.',
     imgSrc: feat3,
   },
 ]
