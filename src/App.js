@@ -3,7 +3,7 @@ import DemoComponent from "./DemoComponent";
 
 function App() {
   return (
-    <div>
+    <div className=" flex justify-center">
    <DemoComponent />
     </div>
   );
