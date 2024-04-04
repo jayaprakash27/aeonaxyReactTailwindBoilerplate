@@ -1,5 +1,11 @@
 import React from "react";
-
+import { SubSection } from './minis'
+const item = {
+  title: "Better conversations",
+  subTitle: "Screen and qualify website visitors or invitees",
+  bodyText: "Prioritize scheduling with high value leads based on industry, companies and other reqirements. Send people who aren't a fit to referral page or other resources.",
+  imgSrc: "https://images.ctfassets.net/k0lk9kiuza3o/7mkknkKmPsEGwaB5mdt60t/f6a386c1a8c4944b51aae8b3b1fa607f/Calendly-Email-Embed-Recruiting.png?q=85&fm=webp",
+}
 const HeroSection = () => {
   return (
     <div className=" mt-40 before:block before:-z-10 before:w-full before:h-full flex flex-col justify-center items-center before:absolute before:top-1/3 before:-inset-1 before:rounded-t-full before:bg-blue-50 before:opacity-50">
@@ -22,22 +28,7 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
-      <div className=" mt-8 bg-white gap-12 w-full flex flex-col md:flex-row">
-        <div className=" mt-8 p-6 text-center md:text-left flex flex-col justify-center">
-        <div className=" uppercase font-semibold text-blue-600">Better conversations</div>
-        <h2 className=" text-3xl mt-6 font-bold text-blue-950">
-          Screen and qualify website visitors or invitees
-        </h2>
-        <div className=" font-light text-blue-900 mt-6">
-          Request information from website visitors or invitees and-based on
-          Misitors their responses-route them to the right person or resource.{" "}
-          <div className="">Available on Professional plans and up.</div>
-        </div>
-        </div>
-        <div className=" flex flex-col">
-            <img src="https://images.ctfassets.net/k0lk9kiuza3o/7mkknkKmPsEGwaB5mdt60t/f6a386c1a8c4944b51aae8b3b1fa607f/Calendly-Email-Embed-Recruiting.png?q=85&fm=webp" />
-        </div>
-      </div>
+      <SubSection item={item} />
     </div>
   );
 };
