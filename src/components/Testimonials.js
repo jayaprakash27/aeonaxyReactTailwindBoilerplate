@@ -3,7 +3,6 @@ import { Testimony } from './minis'
 import img1 from '../assets/images/person-1.jpg'
 import img2 from '../assets/images/person-2.jpg'
 import img3 from '../assets/images/person-3.jpg'
-import Carousel from "nuka-carousel";
 
 const testimonies = [
   {
